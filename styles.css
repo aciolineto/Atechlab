@@ -1,0 +1,257 @@
+﻿/* Cores: azul-marinho #0b1830, branco #ffffff e laranja #f97316. */
+
+/* Estilos gerais */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #263247;
+  background: #ffffff;
+  line-height: 1.7;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible {
+  outline: 3px solid #f97316;
+  outline-offset: 5px;
+}
+
+/* Cabeçalho e menu */
+header {
+  background: #0b1830;
+  color: #ffffff;
+  padding: 20px 0;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 26px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  font-size: 14px;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.botao {
+  display: inline-block;
+  padding: 11px 20px;
+  border-radius: 5px;
+  background: #f97316;
+  color: #0b1830;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.botao:hover {
+  background: #ff8b37;
+}
+
+/* Apresentação */
+.apresentacao {
+  background: #0b1830;
+  color: #ffffff;
+  text-align: center;
+  padding: 65px 0 75px;
+}
+
+.destaque {
+  color: #f97316;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin: 15px 0 20px;
+  font-size: 44px;
+  line-height: 1.2;
+}
+
+.apresentacao p:not(.destaque) {
+  max-width: 570px;
+  margin: 0 auto 28px;
+  color: #d5dce6;
+}
+
+/* Seções */
+section {
+  padding: 50px 0;
+}
+
+h2 {
+  margin: 0 0 22px;
+  color: #0b1830;
+  font-size: 28px;
+}
+
+h3 {
+  margin: 0 0 10px;
+  color: #0b1830;
+  font-size: 18px;
+}
+
+p {
+  margin: 0 0 16px;
+}
+
+.fundo-claro {
+  background: #f5f6f8;
+}
+
+/* Grade de projetos */
+.projetos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 26px;
+}
+
+.cartao {
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e0e4ea;
+  border-top: 3px solid #f97316;
+  border-radius: 5px;
+}
+
+.cartao p {
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #566174;
+}
+
+/* Responsáveis e lista de integrantes */
+.responsaveis {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  padding-bottom: 22px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid #e0e4ea;
+}
+
+.observacao {
+  color: #566174;
+  font-size: 14px;
+}
+
+.extensionistas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 35px;
+  padding: 0;
+  list-style: none;
+}
+
+.extensionistas li {
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e4ea;
+  font-size: 14px;
+}
+
+/* Rodapé */
+footer {
+  padding: 28px 0;
+  background: #0b1830;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer p {
+  margin: 5px 0 0;
+  color: #d5dce6;
+}
+
+/* Atalho para quem navega pelo teclado */
+.pular-conteudo {
+  position: absolute;
+  top: -100px;
+  left: 20px;
+  padding: 10px;
+  background: #ffffff;
+}
+
+.pular-conteudo:focus {
+  top: 10px;
+}
+
+/* Ajustes para tablets e celulares */
+@media (max-width: 760px) {
+  .cabecalho {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .projetos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  .apresentacao {
+    padding: 40px 0 50px;
+  }
+
+  section {
+    padding: 36px 0;
+  }
+
+  .projetos,
+  .responsaveis,
+  .extensionistas {
+    grid-template-columns: 1fr;
+  }
+
+  .responsaveis {
+    gap: 12px;
+  }
+}
